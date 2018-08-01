@@ -11,7 +11,8 @@ Checkout the [introduction video.](http://www.youtube.com/watch?v=t3BEUP0OTFM)
 ## Adding LinqToExcel to your project
 
 #### NuGet
-You can use NuGet to quickly add LinqToExcel to your project. Just search for `linqtoexcel` and install the package. For 64 bit applications, you should install the package named `LinqToExcel_x64`.
+
+Published as [`FreakingAwesome.LinqToExcel_x64` on nuget.org](https://www.nuget.org/packages/FreakingAwesome.LinqToExcel_x64).
 
 #### Manually Add References
 
