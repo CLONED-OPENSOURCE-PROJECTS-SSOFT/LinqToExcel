@@ -42,18 +42,18 @@
 			commandline="&quot;${file.project}&quot; /p:Configuration=Release;DocumentationFile=LinqToExcel.xml;Platform=x64;OutputPath=&quot;${dir.bin64}\\&quot;" />
 	</target>
 
-  <target name="getPublishVersion" description="Gets the AssemblyVersion and sets it in the nuspec file">
+  <target name="getPublishVersion" description="Gets the AssemblyInformationalVersion and sets it in the nuspec file">
     <loadfile
       file="${dir.base}\src\LinqToExcel\Properties\AssemblyInfo.cs"
       property="assemblyInfoContents" />
 
     <regex
       input="${assemblyInfoContents}"
-      pattern="AssemblyVersion\(&quot;(?'assemblyVersion'[^&quot;]*)&quot;\)" />
+      pattern="AssemblyInformationalVersion\(&quot;(?'assemblyInformationalVersion'[^&quot;]*)&quot;\)" />
 
     <property
       name="publish.version"
-      value="${assemblyVersion}" />
+      value="${assemblyInformationalVersion}" />
   </target>
 
   <target name="setVersion" description="Sets the package version in the nuspec file" depends="getPublishVersion">
