@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("LinqToExcel")]
-[assembly: AssemblyDescription("Easily retrieve data from spreadsheets and csv files by using LINQ")]
+[assembly: AssemblyTitle("FreakingAwesome.LinqToExcel")]
+[assembly: AssemblyDescription("A fork of Paul Yoder's LinqToExcel project which includes the ability to lazily stream results among other experimental improvements.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Yoder Web Solutions, LLC")]
-[assembly: AssemblyProduct("LinqToExcel")]
-[assembly: AssemblyCopyright("Copyright © Paul Yoder 2013")]
+[assembly: AssemblyCompany("freakingawesome.net")]
+[assembly: AssemblyProduct("FreakingAwesome.LinqToExcel")]
+[assembly: AssemblyCopyright("Copyright © Paul Yoder, Chad Gilbert 2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -36,8 +36,8 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("2.0.0")]
-[assembly: AssemblyFileVersion("2.0.0")]
-[assembly: AssemblyInformationalVersion("2.0.0-PRERELEASE")]
+[assembly: AssemblyVersion("1.0.0")]
+[assembly: AssemblyFileVersion("1.0.0")]
+[assembly: AssemblyInformationalVersion("1.0.0-alpha.1")]
 
 [assembly: System.Security.AllowPartiallyTrustedCallers]

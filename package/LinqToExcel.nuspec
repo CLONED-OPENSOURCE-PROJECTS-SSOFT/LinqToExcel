@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package>
   <metadata>
-    <id>LinqToExcel</id>
+    <id>FreakingAwesome.LinqToExcel</id>
     <version>Auto populated from AssemblyInfo.cs file</version>
-    <authors>Paul Yoder</authors>
-    <description>Easily retrieve data from spreadsheets and csv files by using LINQ</description>
+    <authors>Paul Yoder, Chad Gilbert</authors>
+    <description>A fork of Paul Yoder's LinqToExcel project which includes the ability to lazily stream results among other experimental improvements.</description>
     <language>en-US</language>
-    <licenseUrl>https://github.com/paulyoder/LinqToExcel/blob/master/License.txt</licenseUrl>
-    <projectUrl>http://code.google.com/p/linqtoexcel/</projectUrl>
+    <licenseUrl>https://github.com/freakingawesome/LinqToExcel/blob/master/License.txt</licenseUrl>
+    <projectUrl>https://github.com/freakingawesome/LinqToExcel</projectUrl>
     <tags>Linq Excel spreadsheet csv</tags>
   </metadata>
 </package>

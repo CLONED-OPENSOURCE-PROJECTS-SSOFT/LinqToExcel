@@ -114,7 +114,7 @@
 		<xmlpoke
 			file="${dir.package64}\LinqToExcel_x64.nuspec"
 			xpath="package/metadata/id"
-			value="LinqToExcel_x64" />
+			value="FreakingAwesome.LinqToExcel_x64" />
 
     <exec program="${tool.nuget}" commandline="pack &quot;${dir.package64}\LinqToExcel_x64.nuspec&quot;" />
 
