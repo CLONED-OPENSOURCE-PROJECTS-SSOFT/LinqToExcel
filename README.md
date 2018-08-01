@@ -1,4 +1,4 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/vdbhqae4b2h86k96?svg=true)](https://ci.appveyor.com/project/mrworkman/linqtoexcel)
+[![Build status](https://ci.appveyor.com/api/projects/status/h7p962tubyqn7v39?svg=true)](https://ci.appveyor.com/project/freakingawesome/linqtoexcel)
 
 # Welcome to the FreakingAwesome fork of the LinqToExcel project
 
