@@ -1,6 +1,8 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/vdbhqae4b2h86k96?svg=true)](https://ci.appveyor.com/project/mrworkman/linqtoexcel)
 
-# Welcome to the LinqToExcel project
+# Welcome to the FreakingAwesome fork of the LinqToExcel project
+
+_This is a fork which provides an experimental lazy way to stream results by setting `Lazy` to `true`._
 
 Linq to Excel is a .Net library that allows you to query Excel spreadsheets using the LINQ syntax.
 
@@ -269,4 +271,18 @@ Set the `ReadOnly` property to true to open the file in readonly mode. The defau
 ```c#
 var excel = new ExcelQueryFactory("excelFileName");
 excel.ReadOnly = true;
+```
+
+## Lazy Mode
+
+Set the `Lazy` property to true to read rows one at a time instead of pulling everything into memory at once. Under the
+hood, this is accomplished using C# `yield` statements.
+
+If you read lazily, you will want to make sure you dispose of the `IEnumerator<T>` when finished. C# will do this
+automatically for you in `foreach` statements and most, if not all, LINQ statements (e.g. `FirstOrDefault()` reads the
+first row and disposes automatically).
+
+```c#
+var excel = new ExcelQueryFactory("excelFileName");
+excel.Lazy = true;
 ```
