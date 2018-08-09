@@ -300,5 +300,5 @@ information.
 
 ```c#
 var excel = new ExcelQueryFactory("excelFileName");
-excel.OleDbServices = Query.OleDbServices.AllServicesExceptPoolingAndAutoEnlistment;
+excel.OleDbServices = OleDbServices.AllServicesExceptPoolingAndAutoEnlistment;
 ```
