@@ -99,6 +99,7 @@
     <Compile Include="Extensions\CommonExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Query\ExcelUtilities.cs" />
+    <Compile Include="Query\OleDbServices.cs" />
     <Compile Include="Query\ProjectorBuildingExpressionTreeVisitor.cs" />
     <Compile Include="Query\ResultObjectMapping.cs" />
     <Compile Include="Query\StrictMappingType.cs" />

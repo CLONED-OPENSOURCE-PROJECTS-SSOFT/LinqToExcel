@@ -21,26 +21,30 @@ namespace LinqToExcel.Query
                 fileNameLower.EndsWith("xlsm"))
             {
                 connString = string.Format(
-                    @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties=""Excel 12.0 Xml;HDR=YES;IMEX=1""",
-                    args.FileName);
+                    @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};OLE DB Services={1:d};Extended Properties=""Excel 12.0 Xml;HDR=YES;IMEX=1""",
+                    args.FileName,
+                    args.OleDbServices);
             }
             else if (fileNameLower.EndsWith("xlsb"))
             {
                 connString = string.Format(
-                    @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties=""Excel 12.0;HDR=YES;IMEX=1""",
-                    args.FileName);
+                    @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};OLE DB Services={1:d};Extended Properties=""Excel 12.0;HDR=YES;IMEX=1""",
+                    args.FileName,
+                    args.OleDbServices);
             }
             else if (fileNameLower.EndsWith("csv"))
             {
                 connString = string.Format(
-                    @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties=""text;Excel 12.0;HDR=YES;IMEX=1""",
-                    Path.GetDirectoryName(args.FileName));
+                    @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};OLE DB Services={1:d};Extended Properties=""text;Excel 12.0;HDR=YES;IMEX=1""",
+                    Path.GetDirectoryName(args.FileName),
+                    args.OleDbServices);
             }
             else
             {
                 connString = string.Format(
-                    @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties=""Excel 12.0;HDR=YES;IMEX=1""",
-                    args.FileName);
+                    @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};OLE DB Services={1:d};Extended Properties=""Excel 12.0;HDR=YES;IMEX=1""",
+                    args.FileName,
+                    args.OleDbServices);
             }
 
             if (args.NoHeader)

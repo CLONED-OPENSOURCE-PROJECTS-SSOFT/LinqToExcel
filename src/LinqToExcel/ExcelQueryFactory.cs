@@ -53,6 +53,12 @@ namespace LinqToExcel
         /// </summary>
         public bool Lazy { get; set; }
 
+        /// <summary>
+        /// Gets or sets the value of the OLE DB Services flag sent in the connection strings,
+        /// which among other features, can disable auto-enlistment in TransactionScopes.
+        /// </summary>
+        public OleDbServices OleDbServices { get; set; }
+
         public ExcelQueryFactory()
           : this(null, null) { }
 
@@ -75,6 +81,7 @@ namespace LinqToExcel
         public ExcelQueryFactory(string fileName, ILogManagerFactory logManagerFactory)
         {
             FileName = fileName;
+            OleDbServices = OleDbServices.AllServices;
 
             if (logManagerFactory != null) {
                _logManagerFactory = logManagerFactory;
@@ -218,6 +225,7 @@ namespace LinqToExcel
                 TrimSpaces = TrimSpaces,
                 ReadOnly = ReadOnly,
                 Lazy = Lazy,
+                OleDbServices = OleDbServices,
             };
         }
 
