@@ -32,6 +32,32 @@ namespace LinqToExcel.Query
             OleDbServices = OleDbServices.AllServices;
         }
 
+        /// <summary>
+        /// Copy constructor
+        /// </summary>
+        internal ExcelQueryArgs(ExcelQueryArgs orig) : this()
+        {
+            if (orig != null)
+            {
+                FileName = orig.FileName;
+                WorksheetName = orig.WorksheetName;
+                WorksheetIndex = orig.WorksheetIndex;
+                ColumnMappings = orig.ColumnMappings;
+                Transformations = orig.Transformations;
+                NamedRangeName = orig.NamedRangeName;
+                StartRange = orig.StartRange;
+                EndRange = orig.EndRange;
+                NoHeader = orig.NoHeader;
+                StrictMapping = orig.StrictMapping;
+                ReadOnly = orig.ReadOnly;
+                UsePersistentConnection = orig.UsePersistentConnection;
+                PersistentConnection = orig.PersistentConnection;
+                TrimSpaces = orig.TrimSpaces;
+                Lazy = orig.Lazy;
+                OleDbServices = orig.OleDbServices;
+            }
+        }
+
         internal ExcelQueryArgs(ExcelQueryConstructorArgs args)
         {
             FileName = args.FileName;

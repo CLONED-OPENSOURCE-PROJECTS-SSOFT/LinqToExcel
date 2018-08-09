@@ -61,8 +61,9 @@ namespace LinqToExcel.Query
 	        return GetWorksheetNames(fileName, new ExcelQueryArgs());
         }
 
-		internal static IEnumerable<string> GetWorksheetNames(string fileName, ExcelQueryArgs args)
+		internal static IEnumerable<string> GetWorksheetNames(string fileName, ExcelQueryArgs origArgs)
 		{
+			var args = new ExcelQueryArgs(origArgs);
 			args.FileName = fileName;
             args.ReadOnly = true;
 			return GetWorksheetNames(args);
@@ -138,7 +139,12 @@ namespace LinqToExcel.Query
 
         internal static IEnumerable<string> GetColumnNames(string worksheetName, string fileName)
         {
-            var args = new ExcelQueryArgs();
+            return GetColumnNames(worksheetName, fileName, new ExcelQueryArgs());
+        }
+
+        internal static IEnumerable<string> GetColumnNames(string worksheetName, string fileName, ExcelQueryArgs origArgs)
+        {
+            var args = new ExcelQueryArgs(origArgs);
             args.WorksheetName = worksheetName;
             args.FileName = fileName;
             return GetColumnNames(args);
@@ -146,7 +152,12 @@ namespace LinqToExcel.Query
 
         internal static IEnumerable<string> GetColumnNames(string worksheetName, string namedRange, string fileName)
         {
-            var args = new ExcelQueryArgs();
+            return GetColumnNames(worksheetName, namedRange, fileName, new ExcelQueryArgs());
+        }
+
+        internal static IEnumerable<string> GetColumnNames(string worksheetName, string namedRange, string fileName, ExcelQueryArgs origArgs)
+        {
+            var args = new ExcelQueryArgs(origArgs);
             args.WorksheetName = worksheetName;
             args.NamedRangeName = namedRange;
             args.FileName = fileName;
@@ -198,15 +209,17 @@ namespace LinqToExcel.Query
             return GetNamedRanges(fileName, new ExcelQueryArgs());
         }
 
-        internal static IEnumerable<string> GetNamedRanges(string fileName, ExcelQueryArgs args)
+        internal static IEnumerable<string> GetNamedRanges(string fileName, ExcelQueryArgs origArgs)
         {
+            var args = new ExcelQueryArgs(origArgs);
             args.FileName = fileName;
             args.ReadOnly = true;
             return GetNamedRanges(args);
         }
 
-        internal static IEnumerable<string> GetNamedRanges(string fileName, string worksheetName, ExcelQueryArgs args)
+        internal static IEnumerable<string> GetNamedRanges(string fileName, string worksheetName, ExcelQueryArgs origArgs)
         {
+            var args = new ExcelQueryArgs(origArgs);
             args.FileName = fileName;
             args.WorksheetName = worksheetName;
             args.ReadOnly = true;
